@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/arithmetic", "destination": "/arithmetic.html" },
+      { "source": "/geometric", "destination": "/geometric.html" }
+    ],
+    "cleanUrls": true
+  }
+  
