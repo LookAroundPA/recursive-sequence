@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometric Sequence Calculator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free geometric sequence calculator. Calculate nth term and sum, generate sequence terms online. Fast, easy and accurate for math learners." />
+    <meta name="keywords" content="geometric sequence calculator, geometric progression, nth term calculator, sequence sum calculator, math sequence tool" />
+    <meta name="author" content="Math Tools" />
+    <meta name="robots" content="index, follow" />
+
+    <title>Geometric Sequence Calculator | Free Online Tool</title>
+    <link rel="canonical" href="https://yourdomain.com/geometric" />
+
+    <meta property="og:title" content="Geometric Sequence Calculator | Free Online Tool" />
+    <meta property="og:description" content="Use our free calculator to find nth term, sequence sum and more for any geometric progression." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/geometric" />
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,13 +25,13 @@
             background-color: #f5f5f5;
         }
         .nav {
-            background-color: #4CAF50;  /* 使用与按钮相同的绿色 */
+            background-color: #4CAF50;
             padding: 10px 20px;
             border-radius: 8px;
             margin-bottom: 20px;
             display: flex;
             gap: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* 添加柔和的阴影 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -27,10 +39,10 @@
             padding: 8px 16px;
             border-radius: 4px;
             transition: background-color 0.3s;
-            opacity: 0.9;  /* 稍微降低不活跃链接的透明度 */
+            opacity: 0.9;
         }
         .nav a:hover {
-            background-color: #45a049;  /* 使用与按钮hover相同的颜色 */
+            background-color: #45a049;
             opacity: 1;
         }
         .nav a.active {
@@ -109,149 +121,138 @@
     </style>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
         <a href="arithmetic.html">Arithmetic Sequence</a>
-        <a href="geometric.html" class="active">Geometric Sequence</a>
+        <a href="geometric.html" class="active" aria-current="page">Geometric Sequence</a>
     </nav>
     
-    <div class="calculator">
+    <main class="calculator">
         <h1>Geometric Sequence Calculator</h1>
         
         <div class="tips" style="display: none;">
-            <strong>Tips:</strong> Use Tab to move to the next field. Use Shift+Tab to move to the previous field. Press Enter to calculate.
+            <strong>Tips:</strong> Use Tab to move to the next field. Use Shift+Tab to go back. Press Enter to calculate.
         </div>
         
-        <div class="calc-group">
-            <label>Calculate Geometric Sequence:</label><br>
-            <input type="number" id="firstTerm" placeholder="First term a₁" step="any">
-            <input type="number" id="ratio" placeholder="Common ratio r" step="any">
-            <input type="number" id="terms" placeholder="Terms n" min="1">
-            <button onclick="calculateSequence()">Calculate</button>
+        <section class="calc-group" aria-labelledby="sequence-calc-heading">
+            <h2 id="sequence-calc-heading">Calculate Geometric Sequence</h2>
+            <label for="firstTerm">First term (a₁):</label>
+            <input type="number" id="firstTerm" placeholder="First term a₁" step="any" aria-label="First term">
+            <label for="ratio">Common ratio (r):</label>
+            <input type="number" id="ratio" placeholder="Common ratio r" step="any" aria-label="Common ratio">
+            <label for="terms">Number of terms (n):</label>
+            <input type="number" id="terms" placeholder="Terms n" min="1" aria-label="Number of terms">
+            <button onclick="calculateSequence()">Calculate Sequence</button>
             
             <div class="result-container">
                 <div>
                     <div class="result-box">
                         <strong>Sequence Sum:</strong>
-                        <div class="result" id="sumResult">-</div>
+                        <div class="result" id="sumResult" aria-live="polite">-</div>
                     </div>
                 </div>
                 <div>
                     <strong>First n Terms:</strong>
-                    <div class="sequence-box" id="sequenceResult">
-                        <!-- Sequence terms will be generated here -->
-                    </div>
+                    <div class="sequence-box" id="sequenceResult" aria-live="polite"></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="calc-group">
-            <label>Calculate nth Term:</label><br>
-            <input type="number" id="firstTerm2" placeholder="First term a₁" step="any">
-            <input type="number" id="ratio2" placeholder="Common ratio r" step="any">
-            <input type="number" id="nthTerm" placeholder="n" min="1">
-            <button onclick="calculateNthTerm()">Calculate</button>
+        <section class="calc-group" aria-labelledby="nth-term-calc-heading">
+            <h2 id="nth-term-calc-heading">Calculate nth Term</h2>
+            <label for="firstTerm2">First term (a₁):</label>
+            <input type="number" id="firstTerm2" placeholder="First term a₁" step="any" aria-label="First term">
+            <label for="ratio2">Common ratio (r):</label>
+            <input type="number" id="ratio2" placeholder="Common ratio r" step="any" aria-label="Common ratio">
+            <label for="nthTerm">Position (n):</label>
+            <input type="number" id="nthTerm" placeholder="n" min="1" aria-label="Position number">
+            <button onclick="calculateNthTerm()">Calculate nth Term</button>
             
             <div class="result-box">
                 <strong>Value of nth Term:</strong>
-                <div class="result" id="nthTermResult">-</div>
+                <div class="result" id="nthTermResult" aria-live="polite">-</div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <div class="faq">
-        <h2>FAQ</h2>
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
         
-        <h3>What is a Geometric Sequence?</h3>
-        <p>A geometric sequence is a sequence where the ratio between each consecutive term is constant. This constant ratio is called the common ratio, usually denoted by the letter r.</p>
+        <section>
+            <h3>What is a Geometric Sequence?</h3>
+            <p>A geometric sequence is a sequence where the ratio between consecutive terms is constant. This ratio is called the common ratio (r).</p>
+        </section>
 
-        <h3>How to Calculate the nth Term?</h3>
-        <p>The formula for the nth term of a geometric sequence is: aₙ = a₁ × rⁿ⁻¹, where:<br>
-           - aₙ is the nth term<br>
-           - a₁ is the first term<br>
-           - r is the common ratio<br>
-           - n is the position number</p>
+        <section>
+            <h3>How to Calculate the nth Term?</h3>
+            <p>The nth term formula is: <code>aₙ = a₁ × rⁿ⁻¹</code>, where a₁ is the first term, r is the common ratio, and n is the position number.</p>
+        </section>
 
-        <h3>How to Calculate the Sum?</h3>
-        <p>The sum of the first n terms of a geometric sequence can be calculated using the formula:<br>
-           - When r ≠ 1: Sₙ = a₁(1-rⁿ)/(1-r)<br>
-           - When r = 1: Sₙ = n×a₁<br>
-           where:<br>
-           - Sₙ is the sum of n terms<br>
-           - a₁ is the first term<br>
-           - r is the common ratio<br>
-           - n is the number of terms</p>
-    </div>
+        <section>
+            <h3>How to Calculate the Sum?</h3>
+            <p>The sum of the first n terms: <code>Sₙ = a₁(1-rⁿ)/(1-r)</code> when r ≠ 1, or <code>Sₙ = n×a₁</code> when r = 1.</p>
+        </section>
+    </section>
 
     <script>
         function calculateSequence() {
             var a1 = parseFloat(document.getElementById('firstTerm').value);
-            var q = parseFloat(document.getElementById('ratio').value);
+            var r = parseFloat(document.getElementById('ratio').value);
             var n = parseInt(document.getElementById('terms').value);
             
-            if (isNaN(a1) || isNaN(q) || isNaN(n) || n < 1) {
+            if (isNaN(a1) || isNaN(r) || isNaN(n) || n < 1) {
                 alert('Please enter valid numbers!');
                 return;
             }
 
-            // 计算所有项
             var sequenceContainer = document.getElementById('sequenceResult');
-            sequenceContainer.innerHTML = ''; // 清空现有内容
+            sequenceContainer.innerHTML = '';
             
             for (var i = 0; i < n; i++) {
-                var term = a1 * Math.pow(q, i);
+                var term = a1 * Math.pow(r, i);
                 var termElement = document.createElement('div');
                 termElement.className = 'sequence-item';
-                // 对结果进行格式化：如果是整数则显示整数，如果是小数则保留4位
                 var formattedTerm = Number.isInteger(term) ? term : parseFloat(term.toFixed(4));
                 termElement.textContent = `a${i + 1} = ${formattedTerm}`;
                 sequenceContainer.appendChild(termElement);
             }
             
-            // 计算数列和
             var sum;
-            if (Math.abs(q - 1) < 1e-10) { // q ≈ 1
+            if (Math.abs(r - 1) < 1e-10) {
                 sum = n * a1;
             } else {
-                sum = a1 * (1 - Math.pow(q, n)) / (1 - q);
+                sum = a1 * (1 - Math.pow(r, n)) / (1 - r);
             }
             document.getElementById('sumResult').textContent = Number.isInteger(sum) ? sum : parseFloat(sum.toFixed(4));
         }
 
         function calculateNthTerm() {
             var a1 = parseFloat(document.getElementById('firstTerm2').value);
-            var q = parseFloat(document.getElementById('ratio2').value);
+            var r = parseFloat(document.getElementById('ratio2').value);
             var n = parseInt(document.getElementById('nthTerm').value);
             
-            if (isNaN(a1) || isNaN(q) || isNaN(n) || n < 1) {
+            if (isNaN(a1) || isNaN(r) || isNaN(n) || n < 1) {
                 alert('Please enter valid numbers!');
                 return;
             }
 
-            var nthTerm = a1 * Math.pow(q, n - 1);
+            var nthTerm = a1 * Math.pow(r, n - 1);
             var formattedTerm = Number.isInteger(nthTerm) ? nthTerm : parseFloat(nthTerm.toFixed(4));
             document.getElementById('nthTermResult').textContent = formattedTerm;
         }
 
-        // Add keyboard navigation
         function handleEnterKey(event, calculationType) {
             if (event.key === 'Enter') {
-                if (calculationType === 'sequence') {
-                    calculateSequence();
-                } else if (calculationType === 'nthTerm') {
-                    calculateNthTerm();
-                }
+                calculationType === 'sequence' ? calculateSequence() : calculateNthTerm();
             }
         }
 
-        // Add event listeners for the first calculator
         document.getElementById('firstTerm').addEventListener('keypress', (e) => handleEnterKey(e, 'sequence'));
         document.getElementById('ratio').addEventListener('keypress', (e) => handleEnterKey(e, 'sequence'));
         document.getElementById('terms').addEventListener('keypress', (e) => handleEnterKey(e, 'sequence'));
 
-        // Add event listeners for the second calculator
         document.getElementById('firstTerm2').addEventListener('keypress', (e) => handleEnterKey(e, 'nthTerm'));
         document.getElementById('ratio2').addEventListener('keypress', (e) => handleEnterKey(e, 'nthTerm'));
         document.getElementById('nthTerm').addEventListener('keypress', (e) => handleEnterKey(e, 'nthTerm'));
     </script>
 </body>
-</html> 
+</html>
