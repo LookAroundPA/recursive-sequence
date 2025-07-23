@@ -9,12 +9,12 @@
     <meta name="robots" content="index, follow" />
 
     <title>Geometric Sequence Calculator | Free Online Tool</title>
-    <link rel="canonical" href="https://yourdomain.com/geometric" />
+    <link rel="canonical" href="https://www.recursivesequence.net/geometric" />
 
     <meta property="og:title" content="Geometric Sequence Calculator | Free Online Tool" />
     <meta property="og:description" content="Use our free calculator to find nth term, sequence sum and more for any geometric progression." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/geometric" />
+    <meta property="og:url" content="https://www.recursivesequence.net/geometric" />
 
     <style>
         body {
@@ -125,14 +125,14 @@
         <a href="arithmetic.html">Arithmetic Sequence</a>
         <a href="geometric.html" class="active" aria-current="page">Geometric Sequence</a>
     </nav>
-    
+
     <main class="calculator">
         <h1>Geometric Sequence Calculator</h1>
-        
+
         <div class="tips" style="display: none;">
             <strong>Tips:</strong> Use Tab to move to the next field. Use Shift+Tab to go back. Press Enter to calculate.
         </div>
-        
+
         <section class="calc-group" aria-labelledby="sequence-calc-heading">
             <h2 id="sequence-calc-heading">Calculate Geometric Sequence</h2>
             <label for="firstTerm">First term (a₁):</label>
@@ -142,7 +142,7 @@
             <label for="terms">Number of terms (n):</label>
             <input type="number" id="terms" placeholder="Terms n" min="1" aria-label="Number of terms">
             <button onclick="calculateSequence()">Calculate Sequence</button>
-            
+
             <div class="result-container">
                 <div>
                     <div class="result-box">
@@ -166,7 +166,7 @@
             <label for="nthTerm">Position (n):</label>
             <input type="number" id="nthTerm" placeholder="n" min="1" aria-label="Position number">
             <button onclick="calculateNthTerm()">Calculate nth Term</button>
-            
+
             <div class="result-box">
                 <strong>Value of nth Term:</strong>
                 <div class="result" id="nthTermResult" aria-live="polite">-</div>
@@ -176,7 +176,7 @@
 
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
-        
+
         <section>
             <h3>What is a Geometric Sequence?</h3>
             <p>A geometric sequence is a sequence where the ratio between consecutive terms is constant. This ratio is called the common ratio (r).</p>
@@ -198,7 +198,7 @@
             var a1 = parseFloat(document.getElementById('firstTerm').value);
             var r = parseFloat(document.getElementById('ratio').value);
             var n = parseInt(document.getElementById('terms').value);
-            
+
             if (isNaN(a1) || isNaN(r) || isNaN(n) || n < 1) {
                 alert('Please enter valid numbers!');
                 return;
@@ -206,7 +206,7 @@
 
             var sequenceContainer = document.getElementById('sequenceResult');
             sequenceContainer.innerHTML = '';
-            
+
             for (var i = 0; i < n; i++) {
                 var term = a1 * Math.pow(r, i);
                 var termElement = document.createElement('div');
@@ -215,7 +215,7 @@
                 termElement.textContent = `a${i + 1} = ${formattedTerm}`;
                 sequenceContainer.appendChild(termElement);
             }
-            
+
             var sum;
             if (Math.abs(r - 1) < 1e-10) {
                 sum = n * a1;
@@ -229,7 +229,7 @@
             var a1 = parseFloat(document.getElementById('firstTerm2').value);
             var r = parseFloat(document.getElementById('ratio2').value);
             var n = parseInt(document.getElementById('nthTerm').value);
-            
+
             if (isNaN(a1) || isNaN(r) || isNaN(n) || n < 1) {
                 alert('Please enter valid numbers!');
                 return;
