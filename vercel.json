@@ -1,15 +1,7 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": true,
   "redirects": [
-    {
-      "source": "/arithmetic",
-      "destination": "/arithmetic/",
-      "permanent": true
-    },
-    {
-      "source": "/geometric",
-      "destination": "/geometric/",
-      "permanent": true
-    },
     {
       "source": "/arithmetic.html",
       "destination": "/arithmetic/",
@@ -18,16 +10,6 @@
     {
       "source": "/geometric.html",
       "destination": "/geometric/",
-      "permanent": true
-    },
-    {
-      "source": "www.recursivesequence.net/:path*",
-      "destination": "https://recursivesequence.net/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://:path*",
-      "destination": "https://:path*",
       "permanent": true
     }
   ],
