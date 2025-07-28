@@ -1,9 +1,58 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/index.html" },
-      { "source": "/arithmetic", "destination": "/arithmetic.html" },
-      { "source": "/geometric", "destination": "/geometric.html" }
-    ],
-    "cleanUrls": true
-  }
+  "redirects": [
+    {
+      "source": "/arithmetic",
+      "destination": "/arithmetic/",
+      "permanent": true
+    },
+    {
+      "source": "/geometric",
+      "destination": "/geometric/",
+      "permanent": true
+    },
+    {
+      "source": "/arithmetic.html",
+      "destination": "/arithmetic/",
+      "permanent": true
+    },
+    {
+      "source": "/geometric.html",
+      "destination": "/geometric/",
+      "permanent": true
+    },
+    {
+      "source": "www.recursivesequence.net/:path*",
+      "destination": "https://recursivesequence.net/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://:path*",
+      "destination": "https://:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
   
