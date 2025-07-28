@@ -11,6 +11,16 @@
       "source": "/geometric.html",
       "destination": "/geometric/",
       "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms/",
+      "permanent": true
     }
   ],
   "headers": [
@@ -34,6 +44,24 @@
           "value": "1; mode=block"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms.html"
     }
   ]
 }
