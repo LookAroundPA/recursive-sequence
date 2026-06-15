@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn the Fibonacci sequence rule, generate its terms step by step, and explore useful properties, examples, and common misconceptions.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <title>Fibonacci Sequence Guide: Rule, Terms, and Examples</title>
+  <link rel="canonical" href="https://recursivesequence.net/fibonacci-sequence-guide/">
+  <meta property="og:title" content="Fibonacci Sequence Guide">
+  <meta property="og:description" content="Learn how Fibonacci numbers are generated and explore their useful properties.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://recursivesequence.net/fibonacci-sequence-guide/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="content-panel">
+      <h1>Fibonacci Sequence Guide</h1>
+      <p class="tool-intro">The Fibonacci sequence is one of the best-known recursive sequences. Each new term is formed by adding the two terms immediately before it.</p>
+
+      <section class="section">
+        <h2>The Fibonacci rule</h2>
+        <p>One common definition begins with <code>F(0) = 0</code> and <code>F(1) = 1</code>. For later positions, the recursive rule is <code>F(n) = F(n - 1) + F(n - 2)</code>.</p>
+        <p>This gives:</p>
+        <p class="sequence-display"><strong>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...</strong></p>
+        <p>Some books list the sequence as 1, 1, 2, 3, 5, and so on. The values are compatible, but the position labels shift because the chosen starting index is different. Always check whether the first term is labeled <code>F(0)</code> or <code>F(1)</code>.</p>
+      </section>
+
+      <section class="section">
+        <h2>Generate Fibonacci terms step by step</h2>
+        <ol class="steps">
+          <li>Write the two initial values: 0 and 1.</li>
+          <li>Add them to obtain the next term: <code>0 + 1 = 1</code>.</li>
+          <li>Add the newest pair: <code>1 + 1 = 2</code>.</li>
+          <li>Continue with <code>1 + 2 = 3</code>, then <code>2 + 3 = 5</code>.</li>
+          <li>Keep only the previous two values in view when calculating the next term.</li>
+        </ol>
+        <div class="note">
+          <strong>Position check:</strong> Under the zero-based definition, <code>F(6) = 8</code>. Under a list that calls the first 1 “term 1,” the sixth listed term is also 8, but the notation is different.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Useful Fibonacci properties</h2>
+        <div class="grid">
+          <section class="card">
+            <h3>Ratios of nearby terms</h3>
+            <p>As the terms grow, the ratio of one positive term to the previous term approaches the golden ratio, approximately 1.618. Early ratios vary noticeably, so this is a long-term tendency rather than an exact rule for every pair.</p>
+          </section>
+          <section class="card">
+            <h3>Sum of early terms</h3>
+            <p>Using the zero-based definition, <code>F(0) + F(1) + ... + F(n) = F(n + 2) - 1</code>. For example, 0 + 1 + 1 + 2 + 3 + 5 = 12, and <code>F(7) - 1 = 13 - 1 = 12</code>.</p>
+          </section>
+          <section class="card">
+            <h3>Every third term is even</h3>
+            <p>The parity pattern repeats odd, odd, even after the initial zero. As a result, every third Fibonacci number is even.</p>
+          </section>
+          <section class="card">
+            <h3>Growth behavior</h3>
+            <p>Fibonacci numbers do not have a constant difference or ratio. Their growth eventually resembles exponential growth, but they are defined by addition of earlier terms.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>A simple modeling example</h2>
+        <p>Suppose a fictional branching process begins with one active branch. Each mature branch creates one new branch per cycle, while new branches take one cycle to mature. If the simplified assumptions hold, the number of branches by stage can follow a Fibonacci-type recurrence because the next count depends on the two preceding stages.</p>
+        <p>Real biological systems have constraints and irregularities, so Fibonacci models should be treated as mathematical simplifications rather than universal descriptions of nature.</p>
+      </section>
+
+      <section class="section">
+        <h2>Common misconceptions</h2>
+        <ul>
+          <li>Not every spiral or natural arrangement is exactly Fibonacci-based.</li>
+          <li>The ratio of consecutive terms is not exactly the golden ratio.</li>
+          <li>The starting convention must be stated before assigning position numbers.</li>
+          <li>Fibonacci is not arithmetic because its differences are not constant.</li>
+          <li>Fibonacci is not geometric because its consecutive ratios are not constant.</li>
+        </ul>
+      </section>
+
+      <section class="section faq">
+        <h2>Fibonacci sequence FAQ</h2>
+        <details>
+          <summary>Why are two starting values required?</summary>
+          <p>The recursive rule refers to two earlier terms, so two initial values are needed before it can calculate a new one.</p>
+        </details>
+        <details>
+          <summary>Is zero a Fibonacci number?</summary>
+          <p>Yes under the widely used definition beginning with <code>F(0) = 0</code>. Some elementary lists begin at 1 instead.</p>
+        </details>
+        <details>
+          <summary>Can Fibonacci numbers be negative?</summary>
+          <p>The standard sequence uses nonnegative positions, but the recurrence can be extended to negative indices, producing values sometimes called negafibonacci numbers.</p>
+        </details>
+        <details>
+          <summary>Is there an explicit Fibonacci formula?</summary>
+          <p>Yes. Binet's formula uses powers of the golden ratio and its conjugate. For basic calculations, the recursive rule is often easier to understand.</p>
+        </details>
+      </section>
+
+      <section class="section note">
+        <h2>Related guides</h2>
+        <p>Learn more about <a href="/recursive-sequence-guide/">recursive rules</a> or compare Fibonacci notation with the formulas in the <a href="/sequence-formulas/">sequence formula reference</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/guides/">Guides</a>
+        <a href="/recursive-sequence-guide/">Recursive Sequence Guide</a>
+        <a href="/fibonacci-sequence-guide/">Fibonacci Guide</a>
+        <a href="/sequence-formulas/">Sequence Formulas</a>
+        <a href="/arithmetic-sequence-examples/">Arithmetic Examples</a>
+        <a href="/geometric-sequence-examples/">Geometric Examples</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
+</body>
+</html>

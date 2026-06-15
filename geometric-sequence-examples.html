@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Work through geometric sequence examples involving nth terms, ratios, finite sums, decay, negative ratios, and practical growth situations.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <title>Geometric Sequence Examples with Solutions</title>
+  <link rel="canonical" href="https://recursivesequence.net/geometric-sequence-examples/">
+  <meta property="og:title" content="Geometric Sequence Examples with Solutions">
+  <meta property="og:description" content="Practice geometric sequence formulas with clear, worked solutions.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://recursivesequence.net/geometric-sequence-examples/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="content-panel">
+      <h1>Geometric Sequence Examples</h1>
+      <p class="tool-intro">These worked examples cover common ratios, nth terms, finite sums, missing values, repeated growth and decay, and sequences with alternating signs.</p>
+
+      <section class="section">
+        <h2>Quick formula review</h2>
+        <p>For first term <code>a1</code>, common ratio <code>r</code>, and position <code>n</code>:</p>
+        <ul>
+          <li>Nth term: <code>a(n) = a1 * r^(n - 1)</code></li>
+          <li>Finite sum when <code>r != 1</code>: <code>S(n) = a1(1 - r^n) / (1 - r)</code></li>
+        </ul>
+        <p>See the <a href="/sequence-formulas/">sequence formulas page</a> for special cases and the infinite sum formula.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 1: Find the common ratio</h2>
+        <p><strong>Problem:</strong> Determine whether 160, 80, 40, 20, 10 is geometric.</p>
+        <ol class="steps">
+          <li>Divide consecutive terms: <code>80 / 160 = 0.5</code>.</li>
+          <li>Check another pair: <code>40 / 80 = 0.5</code>.</li>
+          <li>The ratio remains 0.5, so the sequence is geometric.</li>
+        </ol>
+        <p><strong>Answer:</strong> The common ratio is <code>r = 0.5</code>.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 2: Find an nth term</h2>
+        <p><strong>Problem:</strong> Find the 7th term of 3, 6, 12, 24, ...</p>
+        <ol class="steps">
+          <li>Identify <code>a1 = 3</code>, <code>r = 2</code>, and <code>n = 7</code>.</li>
+          <li>Substitute: <code>a(7) = 3 * 2^(7 - 1)</code>.</li>
+          <li>Calculate: <code>a(7) = 3 * 64 = 192</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The 7th term is 192.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 3: Calculate a finite sum</h2>
+        <p><strong>Problem:</strong> Find the sum of the first 6 terms when <code>a1 = 5</code> and <code>r = 3</code>.</p>
+        <ol class="steps">
+          <li>Use <code>S(6) = 5(1 - 3^6) / (1 - 3)</code>.</li>
+          <li>Calculate <code>3^6 = 729</code>.</li>
+          <li>Simplify: <code>S(6) = 5(-728) / (-2) = 1820</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The sum is 1,820.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 4: A negative ratio</h2>
+        <p><strong>Problem:</strong> Find the fifth term of 16, -8, 4, -2, ...</p>
+        <ol class="steps">
+          <li>The ratio is <code>-8 / 16 = -0.5</code>.</li>
+          <li>Use <code>a(5) = 16(-0.5)^4</code>.</li>
+          <li>Because the exponent is even, the result is positive: <code>a(5) = 1</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The fifth term is 1.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 5: Repeated percentage growth</h2>
+        <p><strong>Problem:</strong> An amount begins at $800 and grows by 5% each period. Find its value in period 8.</p>
+        <ol class="steps">
+          <li>A 5% increase gives the multiplier <code>r = 1 + 0.05 = 1.05</code>.</li>
+          <li>Use <code>a(8) = 800(1.05)^7</code>.</li>
+          <li>Calculate and round to cents: <code>a(8) = 1125.68</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The period-8 value is approximately $1,125.68.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 6: Repeated decay</h2>
+        <p><strong>Problem:</strong> A measured quantity starts at 240 units and retains 75% of its value each stage. Find the fifth value.</p>
+        <ol class="steps">
+          <li>Retaining 75% gives <code>r = 0.75</code>.</li>
+          <li>Use <code>a(5) = 240(0.75)^4</code>.</li>
+          <li>Calculate: <code>a(5) = 75.9375</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The fifth value is 75.9375 units.</p>
+      </section>
+
+      <section class="section">
+        <h2>Practice questions</h2>
+        <ol class="steps">
+          <li>Find the 8th term of 2, 10, 50, 250, ...</li>
+          <li>Find the sum of the first 7 terms when <code>a1 = 4</code> and <code>r = 2</code>.</li>
+          <li>Find the common ratio of 81, -27, 9, -3, ...</li>
+        </ol>
+        <details>
+          <summary>Show answers</summary>
+          <p>1. 156,250. 2. 508. 3. -1/3.</p>
+        </details>
+      </section>
+
+      <section class="section note">
+        <h2>Check your work</h2>
+        <p>Use the <a href="/geometric/">geometric sequence calculator</a> to verify generated terms, nth terms, and finite sums.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/guides/">Guides</a>
+        <a href="/recursive-sequence-guide/">Recursive Sequence Guide</a>
+        <a href="/fibonacci-sequence-guide/">Fibonacci Guide</a>
+        <a href="/sequence-formulas/">Sequence Formulas</a>
+        <a href="/arithmetic-sequence-examples/">Arithmetic Examples</a>
+        <a href="/geometric-sequence-examples/">Geometric Examples</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
+</body>
+</html>

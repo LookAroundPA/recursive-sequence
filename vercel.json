@@ -13,6 +13,36 @@
       "permanent": true
     },
     {
+      "source": "/guides.html",
+      "destination": "/guides/",
+      "permanent": true
+    },
+    {
+      "source": "/recursive-sequence-guide.html",
+      "destination": "/recursive-sequence-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/fibonacci-sequence-guide.html",
+      "destination": "/fibonacci-sequence-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/sequence-formulas.html",
+      "destination": "/sequence-formulas/",
+      "permanent": true
+    },
+    {
+      "source": "/arithmetic-sequence-examples.html",
+      "destination": "/arithmetic-sequence-examples/",
+      "permanent": true
+    },
+    {
+      "source": "/geometric-sequence-examples.html",
+      "destination": "/geometric-sequence-examples/",
+      "permanent": true
+    },
+    {
       "source": "/about.html",
       "destination": "/about/",
       "permanent": true

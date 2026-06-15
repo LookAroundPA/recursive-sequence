@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A clear reference for arithmetic, geometric, recursive, and Fibonacci sequence formulas, including nth terms and finite sums.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <title>Sequence Formulas: Arithmetic, Geometric, and Recursive</title>
+  <link rel="canonical" href="https://recursivesequence.net/sequence-formulas/">
+  <meta property="og:title" content="Sequence Formulas Reference">
+  <meta property="og:description" content="Review arithmetic, geometric, recursive, and Fibonacci formulas in one place.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://recursivesequence.net/sequence-formulas/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="content-panel">
+      <h1>Sequence Formulas</h1>
+      <p class="tool-intro">Use this page as a compact reference for common sequence notation, nth-term formulas, recursive rules, and finite sums. Identify the type of pattern before choosing a formula.</p>
+
+      <section class="section">
+        <h2>Notation used on this page</h2>
+        <div class="formula-table-wrap">
+          <table class="formula-table">
+            <thead>
+              <tr><th>Symbol</th><th>Meaning</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>a1</code></td><td>The first term</td></tr>
+              <tr><td><code>a(n)</code></td><td>The term at position n</td></tr>
+              <tr><td><code>n</code></td><td>A positive whole-number position or number of terms</td></tr>
+              <tr><td><code>d</code></td><td>The common difference in an arithmetic sequence</td></tr>
+              <tr><td><code>r</code></td><td>The common ratio in a geometric sequence</td></tr>
+              <tr><td><code>S(n)</code></td><td>The sum of the first n terms</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Arithmetic sequence formulas</h2>
+        <div class="formula-table-wrap">
+          <table class="formula-table">
+            <thead>
+              <tr><th>Purpose</th><th>Formula</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Common difference</td><td><code>d = a(n) - a(n - 1)</code></td></tr>
+              <tr><td>nth term</td><td><code>a(n) = a1 + (n - 1)d</code></td></tr>
+              <tr><td>Recursive rule</td><td><code>a(n) = a(n - 1) + d</code></td></tr>
+              <tr><td>Finite sum using last term</td><td><code>S(n) = n[a1 + a(n)] / 2</code></td></tr>
+              <tr><td>Finite sum using difference</td><td><code>S(n) = n[2a1 + (n - 1)d] / 2</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Example: if <code>a1 = 5</code>, <code>d = 3</code>, and <code>n = 8</code>, then <code>a(8) = 5 + 7(3) = 26</code>. The sum is <code>8(5 + 26) / 2 = 124</code>.</p>
+        <p><a href="/arithmetic-sequence-examples/">See more arithmetic sequence examples</a> or check values with the <a href="/arithmetic/">arithmetic calculator</a>.</p>
+      </section>
+
+      <section class="section">
+        <h2>Geometric sequence formulas</h2>
+        <div class="formula-table-wrap">
+          <table class="formula-table">
+            <thead>
+              <tr><th>Purpose</th><th>Formula</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Common ratio</td><td><code>r = a(n) / a(n - 1)</code>, when the earlier term is nonzero</td></tr>
+              <tr><td>nth term</td><td><code>a(n) = a1 * r^(n - 1)</code></td></tr>
+              <tr><td>Recursive rule</td><td><code>a(n) = r * a(n - 1)</code></td></tr>
+              <tr><td>Finite sum, r not equal to 1</td><td><code>S(n) = a1(1 - r^n) / (1 - r)</code></td></tr>
+              <tr><td>Finite sum, r = 1</td><td><code>S(n) = n * a1</code></td></tr>
+              <tr><td>Infinite sum, |r| &lt; 1</td><td><code>S = a1 / (1 - r)</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Example: if <code>a1 = 4</code>, <code>r = 2</code>, and <code>n = 5</code>, then <code>a(5) = 4 * 2^4 = 64</code>. The first five terms sum to <code>4(1 - 2^5) / (1 - 2) = 124</code>.</p>
+        <p><a href="/geometric-sequence-examples/">See more geometric sequence examples</a> or use the <a href="/geometric/">geometric calculator</a>.</p>
+      </section>
+
+      <section class="section">
+        <h2>Recursive and Fibonacci formulas</h2>
+        <p>A general recursive formula expresses a term using earlier terms. It must be paired with enough starting values to begin calculation.</p>
+        <ul>
+          <li>Arithmetic recursion: <code>a(1) = a1</code>, <code>a(n) = a(n - 1) + d</code>.</li>
+          <li>Geometric recursion: <code>a(1) = a1</code>, <code>a(n) = r * a(n - 1)</code>.</li>
+          <li>Fibonacci recursion: <code>F(0) = 0</code>, <code>F(1) = 1</code>, <code>F(n) = F(n - 1) + F(n - 2)</code>.</li>
+        </ul>
+        <p>See the <a href="/recursive-sequence-guide/">recursive sequence guide</a> and <a href="/fibonacci-sequence-guide/">Fibonacci sequence guide</a> for step-by-step explanations.</p>
+      </section>
+
+      <section class="section">
+        <h2>How to choose the right formula</h2>
+        <ol class="steps">
+          <li>Check subtraction: a constant difference suggests an arithmetic sequence.</li>
+          <li>Check division: a constant ratio suggests a geometric sequence.</li>
+          <li>Look for a rule based on earlier terms when neither test is constant.</li>
+          <li>Determine whether the question asks for one term or a sum.</li>
+          <li>Write down the known values before substituting them into a formula.</li>
+        </ol>
+      </section>
+
+      <section class="section faq">
+        <h2>Sequence formula FAQ</h2>
+        <details>
+          <summary>Why does the nth-term exponent or multiplier use n - 1?</summary>
+          <p>The first term is already at position 1, so moving from the first term to position n requires n - 1 additions or multiplications.</p>
+        </details>
+        <details>
+          <summary>Can I use the infinite geometric sum formula for any ratio?</summary>
+          <p>No. It applies only when the absolute value of the common ratio is less than 1.</p>
+        </details>
+        <details>
+          <summary>Is there an infinite arithmetic sum formula?</summary>
+          <p>A nonzero constant arithmetic sequence does not have a convergent infinite sum. Arithmetic sum formulas here are finite.</p>
+        </details>
+        <details>
+          <summary>Do sequence positions have to be whole numbers?</summary>
+          <p>In ordinary sequence notation, positions are indexed by whole numbers, commonly beginning at 0 or 1 depending on the definition.</p>
+        </details>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/guides/">Guides</a>
+        <a href="/recursive-sequence-guide/">Recursive Sequence Guide</a>
+        <a href="/fibonacci-sequence-guide/">Fibonacci Guide</a>
+        <a href="/sequence-formulas/">Sequence Formulas</a>
+        <a href="/arithmetic-sequence-examples/">Arithmetic Examples</a>
+        <a href="/geometric-sequence-examples/">Geometric Examples</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
+</body>
+</html>
