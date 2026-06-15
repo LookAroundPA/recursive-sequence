@@ -1,77 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free online sequence calculator. Calculate arithmetic and geometric sequences, find nth terms, sums, and more with our easy-to-use math tools." />
-  <meta name="keywords" content="sequence calculator, arithmetic sequence, geometric sequence, math calculator, series calculator, online math tools" />
-  <meta name="author" content="Math Tools" />
-  <meta name="robots" content="index, follow" />
-  <meta name="waffo-verify" content="281243d38d988a006f478d175279c584" />
-
-  <title>Sequence Calculator | Free Arithmetic & Geometric Tools</title>
-  <!-- 更新canonical标签使用标准格式 -->
-  <link rel="canonical" href="https://recursivesequence.net/" />
-  
-  <!-- 添加替代版本链接 -->
-  <link rel="alternate" href="https://recursivesequence.net/" hreflang="x-default" />
-  <link rel="alternate" href="https://recursivesequence.net/" hreflang="en" />
-  
-  <!-- 强制HTTPS -->
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-  <!-- Open Graph for social media -->
-  <meta property="og:title" content="Sequence Calculator | Free Arithmetic & Geometric Tools" />
-  <meta property="og:description" content="Free online sequence calculator. Easily calculate arithmetic and geometric sequences with our interactive tools." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://recursivesequence.net/" />
-  
-  <!-- 添加Twitter卡片元数据 -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Sequence Calculator | Free Arithmetic & Geometric Tools" />
-  <meta name="twitter:description" content="Free online sequence calculator. Easily calculate arithmetic and geometric sequences with our interactive tools." />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-      color: #333;
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-    p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-    .links {
-      margin-top: 30px;
-    }
-    .links a {
-      color: #4CAF50;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore free arithmetic and geometric sequence calculators with clear formulas, examples, and guidance for learning about number sequences.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <meta name="waffo-verify" content="281243d38d988a006f478d175279c584">
+  <title>Sequence Calculators and Learning Guides | Recursive Sequence</title>
+  <link rel="canonical" href="https://recursivesequence.net/">
+  <link rel="alternate" href="https://recursivesequence.net/" hreflang="x-default">
+  <link rel="alternate" href="https://recursivesequence.net/" hreflang="en">
+  <meta property="og:title" content="Sequence Calculators and Learning Guides">
+  <meta property="og:description" content="Calculate arithmetic and geometric sequences and learn how their formulas work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recursivesequence.net/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <h1>Welcome to the Online Sequence Calculator</h1>
-  <p>
-    Quickly calculate arithmetic and geometric sequences with our free tools. Whether you're a student, teacher, or math enthusiast, we've got you covered.
-  </p>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/arithmetic/">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="links">
-    <a href="/arithmetic/">🔢 Arithmetic Sequence Calculator</a>
-    <a href="/geometric/">📈 Geometric Sequence Calculator</a>
-  </div>
+  <main class="page">
+    <section class="hero">
+      <h1>Understand number patterns with practical sequence calculators</h1>
+      <p>Recursive Sequence provides free tools and straightforward explanations for working with arithmetic and geometric sequences. Generate terms, find an nth term, and check a finite sum without losing sight of the mathematics behind the answer.</p>
+      <div class="button-row">
+        <a class="button" href="/arithmetic/">Use the arithmetic calculator</a>
+        <a class="button secondary" href="/geometric/">Use the geometric calculator</a>
+      </div>
+    </section>
 
-  <p>More tools are coming soon, including Fibonacci sequences, harmonic progressions, and more.</p>
+    <section class="section" aria-labelledby="sequence-types">
+      <h2 id="sequence-types">Common types of sequences</h2>
+      <p class="section-intro">A sequence is an ordered list of numbers. Its rule tells you how the terms are connected, and recognizing that rule helps you predict later terms or calculate a total.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Arithmetic sequences</h3>
+          <p>An arithmetic sequence changes by the same amount at every step. In <strong>4, 7, 10, 13</strong>, the common difference is 3. These sequences model situations with constant additions, such as saving the same amount each week.</p>
+          <a class="card-link" href="/arithmetic/">Explore the arithmetic sequence calculator</a>
+        </article>
+        <article class="card">
+          <h3>Geometric sequences</h3>
+          <p>A geometric sequence multiplies by the same ratio at every step. In <strong>2, 6, 18, 54</strong>, the common ratio is 3. Geometric patterns appear in compound growth, repeated scaling, and decay.</p>
+          <a class="card-link" href="/geometric/">Explore the geometric sequence calculator</a>
+        </article>
+        <article class="card">
+          <h3>Recursive sequences</h3>
+          <p>A recursive definition describes a term using one or more earlier terms. For example, an arithmetic sequence can be written as <code>a(n) = a(n - 1) + d</code>. A starting value is essential because the recursive rule alone does not determine the whole sequence.</p>
+        </article>
+        <article class="card">
+          <h3>Sequence calculators</h3>
+          <p>A calculator is useful for checking repeated computations and exploring how a pattern changes. It should support, not replace, the formula: enter the known values, review the generated terms, and compare the output with your own reasoning.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-to-use">
+      <h2 id="how-to-use">How to use these calculators</h2>
+      <ol class="steps">
+        <li>Choose the calculator that matches the pattern: constant difference for arithmetic or constant ratio for geometric.</li>
+        <li>Enter the first term and the common difference or ratio.</li>
+        <li>Enter the number of terms to generate, or enter a position to find one specific term.</li>
+        <li>Select the calculation button and review the terms, nth-term value, or finite sum.</li>
+        <li>Use the formula and examples below each tool to understand how the result was obtained.</li>
+      </ol>
+    </section>
+
+    <section class="section faq" aria-labelledby="home-faq">
+      <h2 id="home-faq">Frequently asked questions</h2>
+      <details>
+        <summary>How can I tell whether a sequence is arithmetic or geometric?</summary>
+        <p>Check consecutive terms. A constant difference indicates an arithmetic sequence, while a constant nonzero ratio indicates a geometric sequence.</p>
+      </details>
+      <details>
+        <summary>What does “nth term” mean?</summary>
+        <p>The nth term is the value at position n. For example, the fifth term is the term in position 5.</p>
+      </details>
+      <details>
+        <summary>What is the difference between a sequence and a series?</summary>
+        <p>A sequence is an ordered list of terms. A series is the result of adding terms from a sequence.</p>
+      </details>
+      <details>
+        <summary>Can a common difference or ratio be negative?</summary>
+        <p>Yes. A negative difference makes an arithmetic sequence decrease. A negative ratio makes the signs in a geometric sequence alternate.</p>
+      </details>
+      <details>
+        <summary>Do the calculators accept decimal values?</summary>
+        <p>Yes. The first term, common difference, and common ratio can be decimals. Positions and numbers of terms must be positive whole numbers.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
 </body>
 </html>

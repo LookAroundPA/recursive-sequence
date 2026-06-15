@@ -1,188 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free arithmetic sequence calculator. Calculate nth term and sum, generate sequence terms online. Fast, easy and accurate for math learners." />
-  <meta name="keywords" content="arithmetic sequence calculator, arithmetic progression, nth term calculator, sequence sum calculator, math sequence tool" />
-  <meta name="author" content="Math Tools" />
-  <meta name="robots" content="index, follow" />
-
-  <title>Arithmetic Sequence Calculator | Free Online Tool</title>
-  <!-- 更新canonical标签使用完整的https URL -->
-  <link rel="canonical" href="https://recursivesequence.net/arithmetic/" />
-  
-  <!-- 添加替代版本链接 -->
-  <link rel="alternate" href="https://recursivesequence.net/arithmetic/" hreflang="x-default" />
-  <link rel="alternate" href="https://recursivesequence.net/arithmetic/" hreflang="en" />
-  
-  <!-- 强制HTTPS -->
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-  <meta property="og:title" content="Arithmetic Sequence Calculator | Free Online Tool" />
-  <meta property="og:description" content="Use our free calculator to find nth term, sequence sum and more for any arithmetic progression." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://recursivesequence.net/arithmetic/" />
-  
-  <!-- 添加Twitter卡片元数据 -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Arithmetic Sequence Calculator | Free Online Tool" />
-  <meta name="twitter:description" content="Use our free calculator to find nth term, sequence sum and more for any arithmetic progression." />
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-    .calculator {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .calc-group {
-      margin: 20px 0;
-    }
-    input {
-      padding: 8px;
-      margin: 5px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      width: 100px;
-    }
-    .result-box {
-      margin-top: 15px;
-      padding: 10px;
-      background-color: #f8f9fa;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-    }
-    .sequence-box {
-      height: 200px;
-      overflow-y: auto;
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #f8f9fa;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-    }
-    .sequence-item {
-      margin: 5px 0;
-      padding: 5px;
-      border-bottom: 1px solid #eee;
-    }
-    .result {
-      font-weight: bold;
-      margin-top: 10px;
-      word-wrap: break-word;
-    }
-    .faq {
-      margin-top: 40px;
-    }
-    button {
-      padding: 8px 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-    .result-container > div {
-      margin-bottom: 20px;
-    }
-    .tips {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #e8f5e9;
-      border-radius: 4px;
-      color: #2e7d32;
-      font-size: 0.9em;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate arithmetic sequence terms, the nth term, and a finite sum. Learn the formulas with instructions, examples, and common mistakes.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <title>Arithmetic Sequence Calculator and Guide | Recursive Sequence</title>
+  <link rel="canonical" href="https://recursivesequence.net/arithmetic/">
+  <link rel="alternate" href="https://recursivesequence.net/arithmetic/" hreflang="x-default">
+  <link rel="alternate" href="https://recursivesequence.net/arithmetic/" hreflang="en">
+  <meta property="og:title" content="Arithmetic Sequence Calculator and Guide">
+  <meta property="og:description" content="Find arithmetic sequence terms and sums, then learn how the formulas work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recursivesequence.net/arithmetic/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <main class="calculator">
-    <h1>Arithmetic Sequence Calculator</h1>
-
-    <div class="tips" style="display: none;">
-      <strong>Tips:</strong> Use Tab to move to the next field. Use Shift+Tab to go back. Press Enter to calculate.
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/" aria-current="page">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <section class="calc-group" aria-labelledby="sequence-calc-heading">
-      <h2 id="sequence-calc-heading">Calculate Arithmetic Sequence</h2>
-      <label for="firstTerm">First term (a₁):</label>
-      <input type="number" id="firstTerm" placeholder="First term a₁" aria-label="First term">
-      <label for="commonDiff">Common difference (d):</label>
-      <input type="number" id="commonDiff" placeholder="Common diff d" aria-label="Common difference">
-      <label for="terms">Number of terms (n):</label>
-      <input type="number" id="terms" placeholder="Terms n" min="1" aria-label="Number of terms">
-      <button onclick="calculateSequence()">Calculate Sequence</button>
+  <main class="page">
+    <section class="calculator" aria-labelledby="page-title">
+      <h1 id="page-title">Arithmetic Sequence Calculator</h1>
+      <p class="tool-intro">Enter a first term and common difference to generate an arithmetic sequence, calculate its finite sum, or find the term at a particular position.</p>
 
-      <div class="result-container">
-        <div>
-          <div class="result-box">
-            <strong>Sequence Sum:</strong>
-            <div class="result" id="sumResult" aria-live="polite">-</div>
+      <section class="calc-group" aria-labelledby="sequence-calc-heading">
+        <h2 id="sequence-calc-heading">Generate terms and calculate the sum</h2>
+        <div class="form-grid">
+          <div class="field">
+            <label for="firstTerm">First term (a1)</label>
+            <input type="number" id="firstTerm" placeholder="Example: 4" step="any">
+          </div>
+          <div class="field">
+            <label for="commonDiff">Common difference (d)</label>
+            <input type="number" id="commonDiff" placeholder="Example: 3" step="any">
+          </div>
+          <div class="field">
+            <label for="terms">Number of terms (n)</label>
+            <input type="number" id="terms" placeholder="Example: 10" min="1" step="1">
           </div>
         </div>
-        <div>
-          <strong>First n Terms:</strong>
-          <div class="sequence-box" id="sequenceResult" aria-live="polite"></div>
+        <button type="button" onclick="calculateSequence()">Calculate sequence</button>
+        <div class="result-box">
+          <strong>Sum of the generated terms:</strong>
+          <div class="result" id="sumResult" aria-live="polite">-</div>
         </div>
-      </div>
+        <div>
+          <strong>First n terms:</strong>
+          <div class="sequence-box" id="sequenceResult" aria-live="polite">Your generated terms will appear here.</div>
+        </div>
+      </section>
+
+      <section class="calc-group" aria-labelledby="nth-term-calc-heading">
+        <h2 id="nth-term-calc-heading">Calculate one nth term</h2>
+        <div class="form-grid">
+          <div class="field">
+            <label for="firstTerm2">First term (a1)</label>
+            <input type="number" id="firstTerm2" placeholder="Example: 4" step="any">
+          </div>
+          <div class="field">
+            <label for="commonDiff2">Common difference (d)</label>
+            <input type="number" id="commonDiff2" placeholder="Example: 3" step="any">
+          </div>
+          <div class="field">
+            <label for="nthTerm">Position (n)</label>
+            <input type="number" id="nthTerm" placeholder="Example: 10" min="1" step="1">
+          </div>
+        </div>
+        <button type="button" onclick="calculateNthTerm()">Calculate nth term</button>
+        <div class="result-box">
+          <strong>Value of the nth term:</strong>
+          <div class="result" id="nthTermResult" aria-live="polite">-</div>
+        </div>
+      </section>
     </section>
 
-    <section class="calc-group" aria-labelledby="nth-term-calc-heading">
-      <h2 id="nth-term-calc-heading">Calculate nth Term</h2>
-      <label for="firstTerm2">First term (a₁):</label>
-      <input type="number" id="firstTerm2" placeholder="First term a₁" aria-label="First term">
-      <label for="commonDiff2">Common difference (d):</label>
-      <input type="number" id="commonDiff2" placeholder="Common diff d" aria-label="Common difference">
-      <label for="nthTerm">Position (n):</label>
-      <input type="number" id="nthTerm" placeholder="n" min="1" aria-label="Position number">
-      <button onclick="calculateNthTerm()">Calculate nth Term</button>
+    <article>
+      <section class="section" aria-labelledby="what-it-does">
+        <h2 id="what-it-does">What this calculator does</h2>
+        <p>This tool works with finite arithmetic sequences. It can list the first n terms, add those terms, or calculate a single term without generating every earlier value. An arithmetic sequence is appropriate when the difference between each pair of consecutive terms stays constant.</p>
+      </section>
 
-      <div class="result-box">
-        <strong>Value of nth Term:</strong>
-        <div class="result" id="nthTermResult" aria-live="polite">-</div>
-      </div>
-    </section>
+      <section class="section" aria-labelledby="formulas">
+        <h2 id="formulas">Arithmetic sequence formulas</h2>
+        <p>The nth term is <code>a(n) = a1 + (n - 1)d</code>, where <code>a1</code> is the first term, <code>d</code> is the common difference, and <code>n</code> is the position.</p>
+        <p>The sum of the first n terms is <code>S(n) = n(a1 + a(n)) / 2</code>. An equivalent formula is <code>S(n) = n[2a1 + (n - 1)d] / 2</code>.</p>
+        <p>The recursive form is <code>a(n) = a(n - 1) + d</code> for <code>n &gt; 1</code>, together with a stated first term.</p>
+      </section>
+
+      <section class="section" aria-labelledby="instructions">
+        <h2 id="instructions">Step-by-step instructions</h2>
+        <ol class="steps">
+          <li>Identify the first term. This is the starting number, not necessarily the smallest number.</li>
+          <li>Find the common difference by subtracting one term from the next.</li>
+          <li>To list terms and find their sum, enter a positive whole number in “Number of terms.”</li>
+          <li>To find one term, enter its positive whole-number position in the nth-term section.</li>
+          <li>Select the appropriate calculation button and review the result.</li>
+        </ol>
+      </section>
+
+      <section class="section" aria-labelledby="examples">
+        <h2 id="examples">Practical examples</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Weekly savings</h3>
+            <p>You save $10 in week 1 and increase the weekly amount by $5. With <code>a1 = 10</code> and <code>d = 5</code>, week 8 is <code>10 + 7(5) = 45</code>.</p>
+          </article>
+          <article class="card">
+            <h3>Rows of seats</h3>
+            <p>A small venue has 18 seats in the first row and 2 more in every later row. The first 6 rows are 18, 20, 22, 24, 26, and 28, for a total of 138 seats.</p>
+          </article>
+          <article class="card">
+            <h3>Decreasing temperature</h3>
+            <p>A controlled process starts at 80 degrees and drops by 4 degrees per stage. Here <code>d = -4</code>, so the fifth value is <code>80 + 4(-4) = 64</code>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="mistakes">
+        <h2 id="mistakes">Common mistakes</h2>
+        <ul>
+          <li>Using the second term as the first term when assigning <code>a1</code>.</li>
+          <li>Reversing the subtraction used to find the common difference.</li>
+          <li>Using <code>n</code> instead of <code>n - 1</code> in the nth-term formula.</li>
+          <li>Entering a decimal or zero for the number of terms or term position.</li>
+          <li>Confusing a sequence of terms with the sum of those terms.</li>
+        </ul>
+      </section>
+
+      <section class="section faq" aria-labelledby="arithmetic-faq">
+        <h2 id="arithmetic-faq">Arithmetic sequence FAQ</h2>
+        <details>
+          <summary>Can an arithmetic sequence decrease?</summary>
+          <p>Yes. A negative common difference produces a decreasing arithmetic sequence.</p>
+        </details>
+        <details>
+          <summary>Can the common difference be zero?</summary>
+          <p>Yes. When <code>d = 0</code>, every term is equal to the first term.</p>
+        </details>
+        <details>
+          <summary>How do I find the common difference?</summary>
+          <p>Subtract an earlier term from the term immediately after it. Repeat with another pair to confirm that the difference is constant.</p>
+        </details>
+        <details>
+          <summary>Does the calculator find an infinite sum?</summary>
+          <p>No. It calculates finite sums. A nonzero constant arithmetic sequence does not have a convergent infinite sum.</p>
+        </details>
+        <details>
+          <summary>Why might the result show a decimal?</summary>
+          <p>The calculator accepts decimal starting values and differences. It rounds long floating-point results to four decimal places for readability.</p>
+        </details>
+      </section>
+    </article>
   </main>
 
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-
-    <section>
-      <h3>What is an Arithmetic Sequence?</h3>
-      <p>An arithmetic sequence is a sequence where the difference between consecutive terms is constant. This difference is called the common difference (d).</p>
-    </section>
-
-    <section>
-      <h3>How to Calculate the nth Term?</h3>
-      <p>The nth term formula is: <code>aₙ = a₁ + (n-1)d</code>, where a₁ is the first term, d is the common difference, and n is the position number.</p>
-    </section>
-
-    <section>
-      <h3>How to Calculate the Sum?</h3>
-      <p>The sum of the first n terms: <code>Sₙ = n(a₁ + aₙ)/2</code>. Here aₙ is the nth term, a₁ is the first term, and n is the number of terms.</p>
-    </section>
-  </section>
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
 
   <script>
     function calculateSequence() {
       var a1 = parseFloat(document.getElementById('firstTerm').value);
       var d = parseFloat(document.getElementById('commonDiff').value);
-      var n = parseInt(document.getElementById('terms').value);
+      var n = Number(document.getElementById('terms').value);
 
-      if (isNaN(a1) || isNaN(d) || isNaN(n) || n < 1) {
-        alert('Please enter valid numbers!');
+      if (!Number.isFinite(a1) || !Number.isFinite(d) || !Number.isInteger(n) || n < 1) {
+        alert('Please enter valid numbers. The number of terms must be a whole number of at least 1.');
         return;
       }
 
@@ -193,28 +199,29 @@
         var termElement = document.createElement('div');
         termElement.className = 'sequence-item';
         var formattedTerm = Number.isInteger(term) ? term : parseFloat(term.toFixed(4));
-        termElement.textContent = `a${i + 1} = ${formattedTerm}`;
+        termElement.textContent = 'a' + (i + 1) + ' = ' + formattedTerm;
         sequenceContainer.appendChild(termElement);
       }
 
       var lastTerm = a1 + (n - 1) * d;
       var sum = n * (a1 + lastTerm) / 2;
-      document.getElementById('sumResult').textContent = Number.isInteger(sum) ? sum : parseFloat(sum.toFixed(4));
+      document.getElementById('sumResult').textContent =
+        Number.isInteger(sum) ? sum : parseFloat(sum.toFixed(4));
     }
 
     function calculateNthTerm() {
       var a1 = parseFloat(document.getElementById('firstTerm2').value);
       var d = parseFloat(document.getElementById('commonDiff2').value);
-      var n = parseInt(document.getElementById('nthTerm').value);
+      var n = Number(document.getElementById('nthTerm').value);
 
-      if (isNaN(a1) || isNaN(d) || isNaN(n) || n < 1) {
-        alert('Please enter valid numbers!');
+      if (!Number.isFinite(a1) || !Number.isFinite(d) || !Number.isInteger(n) || n < 1) {
+        alert('Please enter valid numbers. The term position must be a whole number of at least 1.');
         return;
       }
 
       var nthTerm = a1 + (n - 1) * d;
-      var formattedTerm = Number.isInteger(nthTerm) ? nthTerm : parseFloat(nthTerm.toFixed(4));
-      document.getElementById('nthTermResult').textContent = formattedTerm;
+      document.getElementById('nthTermResult').textContent =
+        Number.isInteger(nthTerm) ? nthTerm : parseFloat(nthTerm.toFixed(4));
     }
 
     function handleEnterKey(event, calculationType) {
@@ -223,13 +230,24 @@
       }
     }
 
-    document.getElementById('firstTerm').addEventListener('keypress', (e) => handleEnterKey(e, 'sequence'));
-    document.getElementById('commonDiff').addEventListener('keypress', (e) => handleEnterKey(e, 'sequence'));
-    document.getElementById('terms').addEventListener('keypress', (e) => handleEnterKey(e, 'sequence'));
-
-    document.getElementById('firstTerm2').addEventListener('keypress', (e) => handleEnterKey(e, 'nthTerm'));
-    document.getElementById('commonDiff2').addEventListener('keypress', (e) => handleEnterKey(e, 'nthTerm'));
-    document.getElementById('nthTerm').addEventListener('keypress', (e) => handleEnterKey(e, 'nthTerm'));
+    document.getElementById('firstTerm').addEventListener('keydown', function (event) {
+      handleEnterKey(event, 'sequence');
+    });
+    document.getElementById('commonDiff').addEventListener('keydown', function (event) {
+      handleEnterKey(event, 'sequence');
+    });
+    document.getElementById('terms').addEventListener('keydown', function (event) {
+      handleEnterKey(event, 'sequence');
+    });
+    document.getElementById('firstTerm2').addEventListener('keydown', function (event) {
+      handleEnterKey(event, 'nthTerm');
+    });
+    document.getElementById('commonDiff2').addEventListener('keydown', function (event) {
+      handleEnterKey(event, 'nthTerm');
+    });
+    document.getElementById('nthTerm').addEventListener('keydown', function (event) {
+      handleEnterKey(event, 'nthTerm');
+    });
   </script>
 </body>
 </html>
