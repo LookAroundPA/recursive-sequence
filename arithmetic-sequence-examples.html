@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Work through arithmetic sequence examples involving nth terms, common differences, finite sums, missing values, and practical situations.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <title>Arithmetic Sequence Examples with Solutions</title>
+  <link rel="canonical" href="https://recursivesequence.net/arithmetic-sequence-examples/">
+  <meta property="og:title" content="Arithmetic Sequence Examples with Solutions">
+  <meta property="og:description" content="Practice arithmetic sequence formulas with clear, worked solutions.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://recursivesequence.net/arithmetic-sequence-examples/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/sequence-formulas/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="content-panel">
+      <h1>Arithmetic Sequence Examples</h1>
+      <p class="tool-intro">These worked examples show how to identify an arithmetic pattern, find terms and sums, solve for missing information, and translate practical situations into sequence notation.</p>
+
+      <section class="section">
+        <h2>Quick formula review</h2>
+        <p>For first term <code>a1</code>, common difference <code>d</code>, and position <code>n</code>:</p>
+        <ul>
+          <li>Nth term: <code>a(n) = a1 + (n - 1)d</code></li>
+          <li>Finite sum: <code>S(n) = n[a1 + a(n)] / 2</code></li>
+        </ul>
+        <p>See the <a href="/sequence-formulas/">sequence formulas page</a> for a full reference.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 1: Find the common difference</h2>
+        <p><strong>Problem:</strong> Determine whether 17, 12, 7, 2, -3 is arithmetic.</p>
+        <ol class="steps">
+          <li>Subtract consecutive terms: <code>12 - 17 = -5</code>.</li>
+          <li>Check another pair: <code>7 - 12 = -5</code>.</li>
+          <li>The difference remains -5, so the sequence is arithmetic.</li>
+        </ol>
+        <p><strong>Answer:</strong> The common difference is <code>d = -5</code>.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 2: Find an nth term</h2>
+        <p><strong>Problem:</strong> Find the 15th term of 8, 11, 14, 17, ...</p>
+        <ol class="steps">
+          <li>Identify <code>a1 = 8</code>, <code>d = 3</code>, and <code>n = 15</code>.</li>
+          <li>Substitute: <code>a(15) = 8 + (15 - 1)(3)</code>.</li>
+          <li>Simplify: <code>a(15) = 8 + 42 = 50</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The 15th term is 50.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 3: Calculate a finite sum</h2>
+        <p><strong>Problem:</strong> Find the sum of the first 20 terms when <code>a1 = 4</code> and <code>d = 6</code>.</p>
+        <ol class="steps">
+          <li>Find the last term: <code>a(20) = 4 + 19(6) = 118</code>.</li>
+          <li>Use the sum formula: <code>S(20) = 20(4 + 118) / 2</code>.</li>
+          <li>Simplify: <code>S(20) = 10(122) = 1220</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The sum is 1,220.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 4: Find a missing first term</h2>
+        <p><strong>Problem:</strong> The 12th term is 41 and the common difference is 3. Find the first term.</p>
+        <ol class="steps">
+          <li>Start with <code>a(12) = a1 + (12 - 1)(3)</code>.</li>
+          <li>Substitute the known term: <code>41 = a1 + 33</code>.</li>
+          <li>Subtract 33: <code>a1 = 8</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> The first term is 8.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 5: Find a term position</h2>
+        <p><strong>Problem:</strong> In the sequence 5, 12, 19, 26, ..., which term equals 82?</p>
+        <ol class="steps">
+          <li>Use <code>82 = 5 + (n - 1)(7)</code>.</li>
+          <li>Subtract 5: <code>77 = 7(n - 1)</code>.</li>
+          <li>Divide by 7: <code>11 = n - 1</code>, so <code>n = 12</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> 82 is the 12th term.</p>
+      </section>
+
+      <section class="section worked-example">
+        <h2>Example 6: A practical savings pattern</h2>
+        <p><strong>Problem:</strong> Maya saves $15 in the first week and increases the weekly amount by $4. How much does she save in week 10, and how much has she saved across all 10 weeks?</p>
+        <ol class="steps">
+          <li>Use <code>a1 = 15</code>, <code>d = 4</code>, and <code>n = 10</code>.</li>
+          <li>Week 10: <code>a(10) = 15 + 9(4) = 51</code>.</li>
+          <li>Total: <code>S(10) = 10(15 + 51) / 2 = 330</code>.</li>
+        </ol>
+        <p><strong>Answer:</strong> She saves $51 in week 10 and $330 in total.</p>
+      </section>
+
+      <section class="section">
+        <h2>Practice questions</h2>
+        <ol class="steps">
+          <li>Find the 18th term of 2, 7, 12, 17, ...</li>
+          <li>Find the sum of the first 12 terms of 30, 27, 24, 21, ...</li>
+          <li>If <code>a(9) = 38</code> and <code>d = 4</code>, find <code>a1</code>.</li>
+        </ol>
+        <details>
+          <summary>Show answers</summary>
+          <p>1. 87. 2. 162. 3. 6.</p>
+        </details>
+      </section>
+
+      <section class="section note">
+        <h2>Check your work</h2>
+        <p>Enter your values in the <a href="/arithmetic/">arithmetic sequence calculator</a> to verify generated terms, nth terms, and finite sums.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/recursive-sequence-guide/">Recursive Sequence Guide</a>
+        <a href="/fibonacci-sequence-guide/">Fibonacci Guide</a>
+        <a href="/sequence-formulas/">Sequence Formulas</a>
+        <a href="/arithmetic-sequence-examples/">Arithmetic Examples</a>
+        <a href="/geometric-sequence-examples/">Geometric Examples</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -182,6 +182,52 @@ button:hover {
   padding-left: 22px;
 }
 
+.content-panel .section:first-of-type {
+  margin-top: 30px;
+}
+
+.content-panel .note h2 {
+  margin-top: 0;
+}
+
+.formula-table-wrap {
+  overflow-x: auto;
+}
+
+.formula-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+.formula-table th,
+.formula-table td {
+  padding: 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.formula-table th {
+  background: var(--green-pale);
+}
+
+.worked-example {
+  padding: 22px;
+  border-left: 4px solid var(--green);
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+.worked-example h2 {
+  margin-top: 0;
+}
+
+.sequence-display {
+  overflow-wrap: anywhere;
+  font-size: 1.1rem;
+}
+
 .faq details {
   margin-bottom: 12px;
   padding: 16px 18px;

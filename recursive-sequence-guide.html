@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how recursive sequences use earlier terms to define later terms, with clear notation, worked examples, and comparisons with explicit formulas.">
+  <meta name="author" content="Recursive Sequence">
+  <meta name="robots" content="index, follow">
+  <title>Recursive Sequence Guide: Rules and Examples</title>
+  <link rel="canonical" href="https://recursivesequence.net/recursive-sequence-guide/">
+  <meta property="og:title" content="Recursive Sequence Guide: Rules and Examples">
+  <meta property="og:description" content="Understand recursive sequence notation, starting values, and worked examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://recursivesequence.net/recursive-sequence-guide/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">Recursive Sequence</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic</a>
+        <a href="/geometric/">Geometric</a>
+        <a href="/sequence-formulas/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="content-panel">
+      <h1>Recursive Sequence Guide</h1>
+      <p class="tool-intro">A recursive sequence defines each new term by referring to one or more terms that came before it. This guide explains how to read recursive rules, generate terms, and connect recursive notation with familiar sequence formulas.</p>
+
+      <nav class="note" aria-label="On this page">
+        <strong>On this page:</strong>
+        <a href="#definition">definition</a>,
+        <a href="#notation">notation</a>,
+        <a href="#examples">examples</a>,
+        <a href="#explicit">recursive versus explicit rules</a>, and
+        <a href="#faq">FAQ</a>.
+      </nav>
+
+      <section class="section" id="definition">
+        <h2>What is a recursive sequence?</h2>
+        <p>A recursive rule describes how to obtain a term from earlier terms. It must also provide enough initial information to begin the process. For example, the rule <code>a(n) = a(n - 1) + 4</code> says to add 4 to the previous term, but it does not identify a unique sequence until a starting value is given.</p>
+        <p>With <code>a(1) = 3</code>, the rule produces 3, 7, 11, 15, and so on. With <code>a(1) = 10</code>, the same recursive step produces 10, 14, 18, 22. The initial condition is therefore part of the definition, not an optional detail.</p>
+      </section>
+
+      <section class="section" id="notation">
+        <h2>How to read recursive notation</h2>
+        <ul>
+          <li><code>a(n)</code> is the term at position n.</li>
+          <li><code>a(n - 1)</code> is the term immediately before it.</li>
+          <li><code>a(n - 2)</code> is the term two positions earlier.</li>
+          <li>An initial condition such as <code>a(1) = 5</code> supplies a starting value.</li>
+          <li>A restriction such as <code>n &gt; 1</code> indicates when the recursive rule applies.</li>
+        </ul>
+        <p>If a rule refers to the two previous terms, it normally needs two initial values. This is why the <a href="/fibonacci-sequence-guide/">Fibonacci sequence</a> begins with two stated terms.</p>
+      </section>
+
+      <section class="section" id="examples">
+        <h2>Worked recursive sequence examples</h2>
+        <div class="grid">
+          <section class="card">
+            <h3>Constant addition</h3>
+            <p>Given <code>a(1) = 6</code> and <code>a(n) = a(n - 1) + 5</code>, repeatedly add 5:</p>
+            <p><strong>6, 11, 16, 21, 26</strong></p>
+            <p>This is also an arithmetic sequence with common difference 5.</p>
+          </section>
+          <section class="card">
+            <h3>Constant multiplication</h3>
+            <p>Given <code>a(1) = 2</code> and <code>a(n) = 3a(n - 1)</code>, repeatedly multiply by 3:</p>
+            <p><strong>2, 6, 18, 54, 162</strong></p>
+            <p>This is also a geometric sequence with common ratio 3.</p>
+          </section>
+          <section class="card">
+            <h3>Using two earlier terms</h3>
+            <p>Given <code>a(1) = 1</code>, <code>a(2) = 3</code>, and <code>a(n) = a(n - 1) + a(n - 2)</code>:</p>
+            <p><strong>1, 3, 4, 7, 11, 18</strong></p>
+            <p>Each new term is the sum of the two terms before it.</p>
+          </section>
+          <section class="card">
+            <h3>A changing operation</h3>
+            <p>Given <code>a(1) = 2</code> and <code>a(n) = a(n - 1) + n</code>:</p>
+            <p><strong>2, 4, 7, 11, 16</strong></p>
+            <p>The amount added changes with n, so this sequence is not arithmetic.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="section" id="explicit">
+        <h2>Recursive rules versus explicit formulas</h2>
+        <p>A recursive rule builds a term from earlier terms. An explicit formula calculates a term directly from its position. For the arithmetic sequence 3, 7, 11, 15, the recursive rule is <code>a(1) = 3</code> and <code>a(n) = a(n - 1) + 4</code>. Its explicit formula is <code>a(n) = 3 + 4(n - 1)</code>.</p>
+        <p>Recursive descriptions often make the pattern easier to see. Explicit formulas are usually faster when you need a distant term because they avoid calculating every preceding term. Some sequences have simple versions of both; others are much more naturally described recursively.</p>
+      </section>
+
+      <section class="section">
+        <h2>Common mistakes</h2>
+        <ul>
+          <li>Leaving out the initial value or values.</li>
+          <li>Using the rule at a position where the required earlier term does not exist.</li>
+          <li>Confusing <code>a(n - 1)</code> with <code>a(n) - 1</code>.</li>
+          <li>Changing the previous term mentally instead of substituting it carefully.</li>
+          <li>Assuming every recursive sequence is arithmetic or geometric.</li>
+        </ul>
+      </section>
+
+      <section class="section faq" id="faq">
+        <h2>Recursive sequence FAQ</h2>
+        <details>
+          <summary>Does every recursive sequence need a starting value?</summary>
+          <p>Yes. It needs enough initial values to calculate the first term covered by the recursive rule.</p>
+        </details>
+        <details>
+          <summary>Can a recursive rule use more than one earlier term?</summary>
+          <p>Yes. Fibonacci-type rules use two earlier terms, and more advanced recurrences can use several.</p>
+        </details>
+        <details>
+          <summary>Is a recursive sequence the same as an arithmetic sequence?</summary>
+          <p>No. Arithmetic sequences can be written recursively, but recursive notation can describe many other patterns.</p>
+        </details>
+        <details>
+          <summary>How do I check terms generated from a recursive rule?</summary>
+          <p>Substitute each term back into the rule one step at a time and confirm that all initial conditions were used correctly.</p>
+        </details>
+      </section>
+
+      <section class="section note">
+        <h2>Continue learning</h2>
+        <p>Review the <a href="/sequence-formulas/">sequence formulas reference</a>, explore the <a href="/fibonacci-sequence-guide/">Fibonacci guide</a>, or use the <a href="/arithmetic/">arithmetic</a> and <a href="/geometric/">geometric</a> calculators.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/arithmetic/">Arithmetic Sequence Calculator</a>
+        <a href="/geometric/">Geometric Sequence Calculator</a>
+        <a href="/recursive-sequence-guide/">Recursive Sequence Guide</a>
+        <a href="/fibonacci-sequence-guide/">Fibonacci Guide</a>
+        <a href="/sequence-formulas/">Sequence Formulas</a>
+        <a href="/arithmetic-sequence-examples/">Arithmetic Examples</a>
+        <a href="/geometric-sequence-examples/">Geometric Examples</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+      <p>Free educational tools for exploring number sequences.</p>
+    </div>
+  </footer>
+</body>
+</html>
