@@ -13,6 +13,11 @@
       "permanent": true
     },
     {
+      "source": "/guides.html",
+      "destination": "/guides/",
+      "permanent": true
+    },
+    {
       "source": "/recursive-sequence-guide.html",
       "destination": "/recursive-sequence-guide/",
       "permanent": true
