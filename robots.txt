@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://recursivesequence.net/sitemap.xml
